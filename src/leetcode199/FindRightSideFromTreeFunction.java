@@ -14,6 +14,7 @@ public class FindRightSideFromTreeFunction {
         return result;
     }
     
+    // dfs checking right node first
     private void dfs(TreeNode current, List<Integer> result, int currentDepth){
         if(current == null){
             return;
@@ -27,6 +28,7 @@ public class FindRightSideFromTreeFunction {
         dfs(current.left, result, currentDepth + 1);
     }
     
+    // bfs with queue
 	public List<Integer> rightSideViewBFS(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         
